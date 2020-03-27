@@ -14,4 +14,10 @@ class Calculator(object):
                 else:
                     new_list.append(element)
             int_list = [int(x) for x in new_list]
+            for element in int_list:
+                if element > 1000:
+                    int_list.remove(element)
             return sum(int_list)
+
+my_calc = Calculator()
+print(my_calc.Add("1001,2"))
