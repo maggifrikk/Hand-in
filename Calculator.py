@@ -1,8 +1,5 @@
 class Calculator(object):
-    def Add(self, number, number2=""):
+    def Add(self, number):
         if number == "":
             return 0
-        elif number2 == "":
-            return number
-        else:
-            return number + number2
+        
