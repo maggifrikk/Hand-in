@@ -5,4 +5,6 @@ class Calculator(object):
         elif len(number) == 1:
             return int(number)
         else:
-            return int(number[0]) + int(number[-1])
+            my_list = number.split(",")
+            int_list = [int(x) for x in my_list]
+            return sum(int_list)
