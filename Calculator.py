@@ -9,7 +9,11 @@ class Calculator(object):
         elif len(number) == 1:
             return int(number)
         else:
-            my_list = number.split(",")
+            if "/" in number:
+                new_delimiter = number[2]
+                my_list = number[4:].split("{}".format(new_delimiter))
+            else:
+                my_list = number.split(",")
             new_list = []
             for element in my_list:
                 if "\n" in element:
