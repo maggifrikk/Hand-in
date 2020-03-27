@@ -12,5 +12,5 @@ def test_add_two_numbers():
 def test_add_multiple_numbers():
     assert Calculator().Add("1,2,3,4,5") == 15
 
-# def test_add_with_newlines():
-#     assert Calculator().add()
+def test_add_with_newlines():
+    assert Calculator().Add("1\n2,3")
