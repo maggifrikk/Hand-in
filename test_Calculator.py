@@ -7,7 +7,10 @@ def test_add_single_number():
     assert Calculator().Add("1") == 1
 
 def test_add_two_numbers():
-    assert Calculator().Add("1,2")
+    assert Calculator().Add("1,2") == 3
 
 def test_add_multiple_numbers():
-    assert Calculator().Add("1,2,3,4,5")
+    assert Calculator().Add("1,2,3,4,5") == 15
+
+# def test_add_with_newlines():
+#     assert Calculator().add()
