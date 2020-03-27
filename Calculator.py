@@ -1,3 +1,7 @@
+class NegativeNumber(Exception):
+    def __init__(self, message):
+        self.message = message
+
 class Calculator(object):
     def Add(self, number):
         if number == "":
@@ -17,7 +21,13 @@ class Calculator(object):
             for element in int_list:
                 if element > 1000:
                     int_list.remove(element)
+            negative_list = []
+            for elem in int_list:
+                if elem < 0:
+                    negative_list.append(elem)
+            try:
+                if len(negative_list) > 0:
+                    raise NegativeNumber("Negatives not allowed: {}".format(",".join([str(x) for x in negative_list])))
+            except NegativeNumber as e:
+                return e.message
             return sum(int_list)
-
-my_calc = Calculator()
-print(my_calc.Add("1001,2"))

@@ -17,3 +17,6 @@ def test_add_with_newlines():
 
 def test_add_ignore_over_1000():
     assert Calculator().Add("1001, 2") == 2
+
+def test_add_negatives():
+    assert Calculator().Add("2,-4,3,-5") == "Negatives not allowed: -4,-5"
