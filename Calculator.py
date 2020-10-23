@@ -35,5 +35,3 @@ class Calculator(object):
             except NegativeNumber as e:
                 return e.message
             return sum(int_list)
-
-print('Go fuck yourself with a black dildo')
