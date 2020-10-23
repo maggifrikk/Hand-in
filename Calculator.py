@@ -6,7 +6,7 @@ class Calculator(object):
     def Add(self, number):
         if number == "":
             return 0
-        elif len(number) == 1:
+        if len(number) == 1:
             return int(number)
         else:
             if "/" in number:
@@ -35,3 +35,5 @@ class Calculator(object):
             except NegativeNumber as e:
                 return e.message
             return sum(int_list)
+
+print('Go fuck yourself with a black dildo')
